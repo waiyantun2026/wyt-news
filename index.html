@@ -1,21 +1,22 @@
-body { font-family: 'Pyidaungsu', 'Noto Sans Myanmar', sans-serif; background-color: #f4f6f9; color: #333; line-height: 1.6; }
-        header { background-color: #0b3c5d; color: #fff; padding: 1.5rem 1rem; text-align: center; }
-        header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-        header p { font-size: 0.95rem; opacity: 0.9; }
-        nav { background-color: #1d2731; display: flex; justify-content: center; flex-wrap: wrap; }
-        nav a { color: #fff; text-decoration: none; padding: 0.8rem 1.2rem; font-weight: bold; font-size: 0.95rem; }
-        nav a:hover, nav a.active { background-color: #328cc1; }
-        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .news-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; }
+body { font-family: sans-serif; background-color: #f0f2f5; color: #1c1e21; line-height: 1.6; }
+        header { background-color: #0d47a1; color: white; padding: 20px; text-align: center; }
+        header h1 { font-size: 26px; margin-bottom: 5px; }
+        header p { font-size: 14px; opacity: 0.9; }
+        nav { background-color: #1565c0; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav a { color: white; text-decoration: none; padding: 12px 18px; font-weight: bold; font-size: 15px; }
+        nav a:hover { background-color: #0d47a1; }
+        .main-container { max-width: 1000px; margin: 25px auto; padding: 0 15px; }
+        .heading { font-size: 20px; margin-bottom: 20px; border-left: 5px solid #0d47a1; padding-left: 10px; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .news-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
         .news-card img { width: 100%; height: 180px; object-fit: cover; }
-        .news-content { padding: 1.2rem; display: flex; flex-direction: column; flex-grow: 1; }
-        .badge { display: inline-block; background-color: #328cc1; color: #fff; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; width: fit-content; margin-bottom: 0.6rem; }
-        .news-card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; color: #111; line-height: 1.4; }
-        .news-card p { font-size: 0.9rem; color: #555; margin-bottom: 1rem; flex-grow: 1; }
-        .read-more { align-self: flex-start; background: #0b3c5d; color: #fff; text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.85rem; }
-        .read-more:hover { background: #328cc1; }
-        footer { text-align: center; padding: 2rem; background: #1d2731; color: #aaa; font-size: 0.85rem; margin-top: 2rem; }
+        .news-body { padding: 15px; display: flex; flex-direction: column; flex-grow: 1; }
+        .category { background: #e3f2fd; color: #0d47a1; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; width: fit-content; margin-bottom: 8px; }
+        .news-body h3 { font-size: 16px; margin-bottom: 8px; line-height: 1.4; color: #111; }
+        .news-body p { font-size: 13px; color: #555; margin-bottom: 15px; flex-grow: 1; }
+        .btn-read { background: #0d47a1; color: white; text-decoration: none; padding: 6px 12px; border-radius: 4px; font-size: 13px; align-self: flex-start; }
+        .btn-read:hover { background: #1565c0; }
+        footer { text-align: center; padding: 25px; background: #263238; color: #ccc; font-size: 13px; margin-top: 30px; }
     </style>
 </head>
 <body>
@@ -26,48 +27,44 @@ body { font-family: 'Pyidaungsu', 'Noto Sans Myanmar', sans-serif; background-co
     </header>
 
     <nav>
-        <a href="index.html" class="active">နောက်ဆုံးရ</a>
-        <a href="myanmar.html">မြန်မာ</a>
-        <a href="japan.html">ဂျပန်</a>
-        <a href="world.html">ကမ္ဘာ</a>
+        <a href="index.html">ပင်မစာမျက်နှာ</a>
+        <a href="myanmar.html">မြန်မာသတင်း</a>
+        <a href="japan.html">ဂျပန်သတင်း</a>
+        <a href="world.html">ကမ္ဘာ့သတင်း</a>
         <a href="business.html">စီးပွားရေး</a>
-        <a href="video.html">ဗီဒီယို</a>
     </nav>
 
-    <div class="container">
-        <h2 style="margin-bottom: 1.2rem; border-bottom: 2px solid #0b3c5d; padding-bottom: 0.4rem;">နောက်ဆုံးရသတင်းများ</h2>
+    <div class="main-container">
+        <h2 class="heading">နောက်ဆုံးရသတင်းများ</h2>
         
         <div class="news-grid">
-            <!-- သတင်း ၁ -->
             <div class="news-card">
-                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=500" alt="ဂျပန်သတင်း">
-                <div class="news-content">
-                    <span class="badge">ဂျပန်</span>
-                    <h3>ဂျပန်နိုင်ငံတွင် နိုင်ငံခြားသား လုပ်သားများအတွက် ဗီဇာမူဝါဒသစ်များ ပြင်ဆင်ရေးဆွဲ</h3>
-                    <p>ဂျပန်အစိုးရသည် ကျွမ်းကျင်လုပ်သား လိုအပ်ချက်ကို ဖြည့်ဆည်းရန်အတွက် သက်ဆိုင်ရာ ဗီဇာစည်းမျဉ်းများကို လာမည့်နှစ်များအတွင်း တိုးချဲ့ခွင့်ပြုရန် စီစဉ်ဆောင်ရွက်လျက်ရှိကြောင်း သိရှိရပါသည်။</p>
-                    <a href="article.html" class="read-more">ဆက်ဖတ်ရန်</a>
+                <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=500" alt="ဂျပန်">
+                <div class="news-body">
+                    <span class="category">ဂျပန်</span>
+                    <h3>ဂျပန်နိုင်ငံတွင် နိုင်ငံခြားသား လုပ်သားများအတွက် ဗီဇာမူဝါဒသစ်များ စတင်ပြင်ဆင်</h3>
+                    <p>ဂျပန်အစိုးရသည် လုပ်သားရှားပါးမှုကို ဖြေရှင်းရန်အတွက် သက်ဆိုင်ရာ ဗီဇာမူဝါဒနှင့် လုပ်ငန်းခွင်စည်းမျဉ်းများကို ပိုမိုဖြေလျှော့ပေးရန် စီစဉ်လျက်ရှိကြောင်း သိရှိရပါသည်။</p>
+                    <a href="#" class="btn-read">အပြည့်အစုံဖတ်ရန်</a>
                 </div>
             </div>
 
-            <!-- သတင်း ၂ -->
             <div class="news-card">
-                <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=500" alt="စီးပွားရေးသတင်း">
-                <div class="news-content">
-                    <span class="badge">စီးပွားရေး</span>
-                    <h3>နိုင်ငံတကာ ငွေကြေးဈေးကွက်နှင့် စီးပွားရေးဆိုင်ရာ နောက်ဆုံးအခြေအနေများ</h3>
-                    <p>ကမ္ဘာ့ဘဏ်နှင့် ငွေကြေးဈေးကွက်အတွင်း အတိုးနှုန်းအပြောင်းအလဲများကြောင့် အာရှဒေသတွင်း ဈေးကွက်များတွင် ငွေလဲလှယ်နှုန်း မတည်ငြိမ်မှုများ ဆက်လက်ဖြစ်ပေါ်နေပါသည်။</p>
-                    <a href="business.html" class="read-more">ဆက်ဖတ်ရန်</a>
+                <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=500" alt="စီးပွားရေး">
+                <div class="news-body">
+                    <span class="category">စီးပွားရေး</span>
+                    <h3>နိုင်ငံတကာ ငွေကြေးဈေးကွက်နှင့် စီးပွားရေးဆိုင်ရာ နောက်ဆုံးရ အခြေအနေများ</h3>
+                    <p>ကမ္ဘာ့ဘဏ်နှင့် ဗဟိုဘဏ်များ၏ အတိုးနှုန်းဆိုင်ရာ ပြင်ဆင်ချက်များကြောင့် ငွေလဲလှယ်နှုန်းဈေးကွက်များတွင် အပြောင်းအလဲများ ဆက်လက်ဖြစ်ပေါ်နေပါသည်။</p>
+                    <a href="#" class="btn-read">အပြည့်အစုံဖတ်ရန်</a>
                 </div>
             </div>
 
-            <!-- သတင်း ၃ -->
             <div class="news-card">
-                <img src="https://images.unsplash.com/photo-1508849789987-4e5333c12b78?w=500" alt="နည်းပညာသတင်း">
-                <div class="news-content">
-                    <span class="badge">ကမ္ဘာ</span>
-                    <h3>ကမ္ဘာတစ်ဝှမ်း ဉာဏ်ရည်တု (AI) နည်းပညာ ဖွံ့ဖြိုးတိုးတက်မှု အလားအလာများ</h3>
-                    <p>ယခုနှစ်အတွင်း AI နည်းပညာများ ပိုမိုခေတ်မီလာပြီး လုပ်ငန်းခွင်အသီးသီးတွင် အလိုအလျောက်စနစ်များကို တွင်ကျယ်စွာ အသုံးပြုလာကြကြောင်း လေ့လာမှုများအရ သိရသည်။</p>
-                    <a href="world.html" class="read-more">ဆက်ဖတ်ရန်</a>
+                <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=500" alt="ကမ္ဘာ">
+                <div class="news-body">
+                    <span class="category">ကမ္ဘာ့သတင်း</span>
+                    <h3>ကမ္ဘာတစ်ဝှမ်း နည်းပညာနှင့် သတင်းအချက်အလက် ဖွံ့ဖြိုးမှုအသစ်များ</h3>
+                    <p>ခေတ်မီ AI နည်းပညာများ တိုးတက်လာမှုနှင့်အတူ လူနေမှုဘဝနှင့် စီးပွားရေးလုပ်ငန်းများ ပိုမိုလွယ်ကူမြန်ဆန်လာကြောင်း သုံးသပ်ဖော်ပြထားပါသည်။</p>
+                    <a href="#" class="btn-read">အပြည့်အစုံဖတ်ရန်</a>
                 </div>
             </div>
         </div>
