@@ -1,36 +1,81 @@
-<!doctype html>
-<html lang="my">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="WYT NEWS - မြန်မာ၊ ဂျပန်နှင့် ကမ္ဘာ့သတင်းများကို ရိုးရှင်းလွယ်ကူစွာ ဖတ်ရှုနိုင်ပါသည်။">
-<title>WYT NEWS | မြန်မာ・ဂျပန်・ကမ္ဘာ</title>
-<link rel="stylesheet" href="style.css">
+body { font-family: 'Pyidaungsu', 'Noto Sans Myanmar', sans-serif; background-color: #f4f6f9; color: #333; line-height: 1.6; }
+        header { background-color: #0b3c5d; color: #fff; padding: 1.5rem 1rem; text-align: center; }
+        header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        header p { font-size: 0.95rem; opacity: 0.9; }
+        nav { background-color: #1d2731; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav a { color: #fff; text-decoration: none; padding: 0.8rem 1.2rem; font-weight: bold; font-size: 0.95rem; }
+        nav a:hover, nav a.active { background-color: #328cc1; }
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .news-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; flex-direction: column; }
+        .news-card img { width: 100%; height: 180px; object-fit: cover; }
+        .news-content { padding: 1.2rem; display: flex; flex-direction: column; flex-grow: 1; }
+        .badge { display: inline-block; background-color: #328cc1; color: #fff; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; width: fit-content; margin-bottom: 0.6rem; }
+        .news-card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; color: #111; line-height: 1.4; }
+        .news-card p { font-size: 0.9rem; color: #555; margin-bottom: 1rem; flex-grow: 1; }
+        .read-more { align-self: flex-start; background: #0b3c5d; color: #fff; text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.85rem; }
+        .read-more:hover { background: #328cc1; }
+        footer { text-align: center; padding: 2rem; background: #1d2731; color: #aaa; font-size: 0.85rem; margin-top: 2rem; }
+    </style>
 </head>
 <body>
-<header class="header"><div class="wrap header-in">
-<a class="logo" href="index.html"><span class="logo-mark">WYT<br><i>NEWS</i></span><span>WYT <b>NEWS</b></span></a>
-<button class="menu" aria-label="မီနူး">☰</button>
-<nav><a class="on" href="index.html">ပင်မစာမျက်နှာ</a><a href="myanmar.html">မြန်မာ</a><a href="japan.html">ဂျပန်</a><a href="world.html">ကမ္ဘာ</a><a href="business.html">စီးပွားရေး</a><a href="video.html">ဗီဒီယို</a></nav>
-<button class="search-open" aria-label="ရှာဖွေရန်">⌕</button>
-</div></header>
-<div class="ticker"><div class="wrap ticker-in"><strong>WYT NEWS</strong><span>Myanmar ・ Japan ・ World</span><span class="ticker-text">သတင်းများကို ပိုမိုလွယ်ကူစွာ သိရှိနိုင်ပါပြီ။</span></div></div>
-<main>
-<section class="hero"><div class="wrap hero-in"><div class="hero-copy"><small>MYANMAR ・ JAPAN ・ WORLD</small><h1>WYT <em>NEWS</em></h1><p>မြန်မာ၊ ဂျပန်နှင့် ကမ္ဘာတစ်ဝှမ်းမှ သတင်းများကို<br>ရိုးရှင်းလွယ်ကူစွာ ဖတ်ရှုနိုင်ရန်။</p><div class="buttons"><a class="btn primary" href="#latest">နောက်ဆုံးရသတင်းများ</a><a class="btn ghost" href="myanmar.html">သတင်းများ ကြည့်ရန်</a></div></div><div class="hero-earth"><div class="earth-ring r1"></div><div class="earth-ring r2"></div><div class="earth-ball"><span>WYT</span><b>NEWS</b></div></div></div></section>
-<section class="cat"><div class="wrap cat-grid"><a href="myanmar.html"><strong>🇲🇲</strong><span>မြန်မာ<small>MYANMAR</small></span></a><a href="japan.html"><strong>🇯🇵</strong><span>ဂျပန်<small>JAPAN</small></span></a><a href="world.html"><strong>🌍</strong><span>ကမ္ဘာ<small>WORLD</small></span></a><a href="business.html"><strong>📈</strong><span>စီးပွားရေး<small>BUSINESS</small></span></a><a href="video.html"><strong>▶</strong><span>ဗီဒီယို<small>VIDEO</small></span></a></div></section>
-<section class="section" id="latest"><div class="wrap"><div class="heading"><div><small>LATEST NEWS</small><h2>နောက်ဆုံးရသတင်းများ</h2></div><a href="myanmar.html">အားလုံးကြည့်ရန် →</a></div><div class="cards three">
-<article class="card lead"><a href="article.html"><div class="photo world">WORLD</div><div class="card-body"><small>ကမ္ဘာ　2026.10.01</small><h3>ကမ္ဘာတစ်ဝှမ်းမှ နောက်ဆုံးရသတင်းများကို WYT NEWS တွင် ဖတ်ရှုပါ</h3><p>အရေးကြီးသောသတင်းများကို ရိုးရှင်းပြီး နားလည်လွယ်သောပုံစံဖြင့် တင်ဆက်ပေးပါမည်။</p><b>ဆောင်းပါးဖတ်ရန် →</b></div></a></article>
-<article class="card"><a href="article.html"><div class="photo myanmar">MYANMAR</div><div class="card-body"><small>မြန်မာ　2026.10.01</small><h3>မြန်မာနိုင်ငံ၏ နောက်ဆုံးရသတင်းများ</h3><p>လူမှုရေး၊ စီးပွားရေးနှင့် နေ့စဉ်ဘဝဆိုင်ရာ သတင်းများကို ဖတ်ရှုနိုင်ပါသည်။</p><b>ဆောင်းပါးဖတ်ရန် →</b></div></a></article>
-<article class="card"><a href="article.html"><div class="photo japan">JAPAN</div><div class="card-body"><small>ဂျပန်　2026.10.01</small><h3>ဂျပန်နိုင်ငံတွင် နေထိုင်သူများအတွက် အသုံးဝင်သောသတင်းများ</h3><p>အလုပ်၊ နေထိုင်မှုနှင့် လူမှုဘဝဆိုင်ရာ သတင်းအချက်အလက်များ။</p><b>ဆောင်းပါးဖတ်ရန် →</b></div></a></article>
-</div></div></section>
-<section class="section pale"><div class="wrap split"><div><small class="blue">MYANMAR NEWS</small><h2>မြန်မာသတင်း</h2><p>မြန်မာနိုင်ငံ၏ လူမှုရေး၊ စီးပွားရေး၊ နေ့စဉ်ဘဝနှင့် ပြည်ပရောက် မြန်မာများဆိုင်ရာ သတင်းများကို တင်ဆက်ပေးပါမည်။</p><a class="link" href="myanmar.html">မြန်မာသတင်းများ ကြည့်ရန် →</a></div><div class="list"><a href="article.html"><i>01</i><span><b>မြန်မာနိုင်ငံတွင် စိတ်ဝင်စားဖွယ်ရာ သတင်းများ</b><small>MYANMAR　2026.10.01</small></span></a><a href="article.html"><i>02</i><span><b>မြန်မာပြည်သူများအတွက် အသုံးဝင်သောအချက်အလက်များ</b><small>MYANMAR　2026.09.30</small></span></a><a href="article.html"><i>03</i><span><b>ပြည်ပရောက် မြန်မာများနှင့် ပတ်သက်သော သတင်းများ</b><small>MYANMAR　2026.09.29</small></span></a></div></div></section>
-<section class="section"><div class="wrap split reverse"><div class="list"><a href="article.html"><i>01</i><span><b>ဂျပန်နိုင်ငံတွင် သိထားသင့်သော နောက်ဆုံးရသတင်းများ</b><small>JAPAN　2026.10.01</small></span></a><a href="article.html"><i>02</i><span><b>နိုင်ငံခြားသားများ၏ အလုပ်နှင့် နေထိုင်မှုဆိုင်ရာ သတင်းများ</b><small>JAPAN　2026.09.30</small></span></a><a href="article.html"><i>03</i><span><b>ဂျပန်နိုင်ငံ၏ လူမှုရေးနှင့် နေ့စဉ်ဘဝဆိုင်ရာ အကြောင်းအရာများ</b><small>JAPAN　2026.09.29</small></span></a></div><div><small class="blue">JAPAN NEWS</small><h2>ဂျပန်သတင်း</h2><p>ဂျပန်နိုင်ငံတွင် နေထိုင်သော နိုင်ငံခြားသားများအတွက်လည်း နားလည်လွယ်သော သတင်းများကို တင်ဆက်ပေးပါမည်။</p><a class="link" href="japan.html">ဂျပန်သတင်းများ ကြည့်ရန် →</a></div></div></section>
-<section class="section dark"><div class="wrap"><div class="heading light"><div><small>WORLD NEWS</small><h2>ကမ္ဘာ့သတင်း</h2></div><a href="world.html">အားလုံးကြည့်ရန် →</a></div><div class="world-grid"><a href="article.html"><i>01</i><b>ကမ္ဘာ့စီးပွားရေးနှင့် စီးပွားရေးလုပ်ငန်းများ၏ အခြေအနေ</b><small>WORLD</small></a><a href="article.html"><i>02</i><b>ကမ္ဘာတစ်ဝှမ်းတွင် စိတ်ဝင်စားဖွယ်ရာ ဖြစ်ရပ်များ</b><small>WORLD</small></a><a href="article.html"><i>03</i><b>နိုင်ငံတကာလူမှုဘဝနှင့် နေထိုင်မှုဆိုင်ရာ သတင်းများ</b><small>WORLD</small></a></div></div></section>
-<section class="section"><div class="wrap business-box"><div><small class="blue">BUSINESS</small><h2>စီးပွားရေး・ငွေကြေး</h2><p>အလုပ်အကိုင်၊ စီးပွားရေး၊ ငွေကြေးနှင့် ရင်းနှီးမြှုပ်နှံမှုဆိုင်ရာ အသုံးဝင်သော အချက်အလက်များကို ရိုးရှင်းစွာ တင်ဆက်ပေးပါမည်။</p><a class="link" href="business.html">စီးပွားရေးသတင်းများ ကြည့်ရန် →</a></div><div class="round-logo">WYT<strong>NEWS</strong></div></div></section>
-<section class="section pale"><div class="wrap"><div class="heading"><div><small>VIDEO & REELS</small><h2>ဗီဒီယို・Reels</h2></div><a href="video.html">ဗီဒီယိုများ ကြည့်ရန် →</a></div><div class="video-grid"><a href="video.html"><span>▶</span><b>ယနေ့၏ အရေးကြီးသတင်းများကို အတိုချုံးကြည့်ပါ</b><small>WYT NEWS REELS</small></a><a href="video.html"><span>▶</span><b>ဂျပန်နိုင်ငံတွင် နေထိုင်သူများအတွက် အသုံးဝင်သောအချက်များ</b><small>WYT NEWS REELS</small></a><a href="video.html"><span>▶</span><b>မြန်မာနိုင်ငံ၏ စိတ်ဝင်စားဖွယ်ရာ အကြောင်းအရာများ</b><small>WYT NEWS REELS</small></a></div></div></section>
-<section class="cta"><div class="wrap cta-in"><div><small>WYT NEWS</small><h2>သတင်းများကို ပိုမိုနီးကပ်စွာ သိရှိလိုက်ပါ။</h2><p>Facebook・TikTok・Instagram・YouTube တို့မှလည်း WYT NEWS ကို Follow လုပ်နိုင်ပါသည်။</p></div><div class="social"><a href="#">Facebook</a><a href="#">TikTok</a><a href="#">Instagram</a><a href="#">YouTube</a></div></div></section>
-<section class="search-area"><div class="wrap"><h3>WYT NEWS တွင် ရှာဖွေရန်</h3><form id="searchForm"><input id="searchInput" type="search" placeholder="သတင်းကို ရှာဖွေပါ"><button>ရှာဖွေရန်</button></form><div id="searchResult"></div></div></section>
-</main>
-<footer><div class="wrap footer-grid"><div><div class="footer-logo">WYT <b>NEWS</b></div><p>Myanmar ・ Japan ・ World</p></div><div class="footer-nav"><a href="index.html">ပင်မစာမျက်နှာ</a><a href="myanmar.html">မြန်မာ</a><a href="japan.html">ဂျပန်</a><a href="world.html">ကမ္ဘာ</a><a href="business.html">စီးပွားရေး</a><a href="video.html">ဗီဒီယို</a></div><small>© 2026 WYT NEWS. All Rights Reserved.</small></div></footer>
-<div class="search-modal" id="searchModal"><div class="modal-box"><button class="close">×</button><h3>WYT NEWS တွင် ရှာဖွေရန်</h3><input type="search" placeholder="သော့ချက်စာလုံး ရိုက်ထည့်ပါ"></div></div>
-<script src="script.js"></script>
-</body></html>
+
+    <header>
+        <h1>WYT NEWS</h1>
+        <p>မြန်မာ၊ ဂျပန်နှင့် ကမ္ဘာတစ်ဝှမ်းမှ သတင်းများကို ရိုးရှင်းလွယ်ကူစွာ ဖတ်ရှုနိုင်ရန်</p>
+    </header>
+
+    <nav>
+        <a href="index.html" class="active">နောက်ဆုံးရ</a>
+        <a href="myanmar.html">မြန်မာ</a>
+        <a href="japan.html">ဂျပန်</a>
+        <a href="world.html">ကမ္ဘာ</a>
+        <a href="business.html">စီးပွားရေး</a>
+        <a href="video.html">ဗီဒီယို</a>
+    </nav>
+
+    <div class="container">
+        <h2 style="margin-bottom: 1.2rem; border-bottom: 2px solid #0b3c5d; padding-bottom: 0.4rem;">နောက်ဆုံးရသတင်းများ</h2>
+        
+        <div class="news-grid">
+            <!-- သတင်း ၁ -->
+            <div class="news-card">
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=500" alt="ဂျပန်သတင်း">
+                <div class="news-content">
+                    <span class="badge">ဂျပန်</span>
+                    <h3>ဂျပန်နိုင်ငံတွင် နိုင်ငံခြားသား လုပ်သားများအတွက် ဗီဇာမူဝါဒသစ်များ ပြင်ဆင်ရေးဆွဲ</h3>
+                    <p>ဂျပန်အစိုးရသည် ကျွမ်းကျင်လုပ်သား လိုအပ်ချက်ကို ဖြည့်ဆည်းရန်အတွက် သက်ဆိုင်ရာ ဗီဇာစည်းမျဉ်းများကို လာမည့်နှစ်များအတွင်း တိုးချဲ့ခွင့်ပြုရန် စီစဉ်ဆောင်ရွက်လျက်ရှိကြောင်း သိရှိရပါသည်။</p>
+                    <a href="article.html" class="read-more">ဆက်ဖတ်ရန်</a>
+                </div>
+            </div>
+
+            <!-- သတင်း ၂ -->
+            <div class="news-card">
+                <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=500" alt="စီးပွားရေးသတင်း">
+                <div class="news-content">
+                    <span class="badge">စီးပွားရေး</span>
+                    <h3>နိုင်ငံတကာ ငွေကြေးဈေးကွက်နှင့် စီးပွားရေးဆိုင်ရာ နောက်ဆုံးအခြေအနေများ</h3>
+                    <p>ကမ္ဘာ့ဘဏ်နှင့် ငွေကြေးဈေးကွက်အတွင်း အတိုးနှုန်းအပြောင်းအလဲများကြောင့် အာရှဒေသတွင်း ဈေးကွက်များတွင် ငွေလဲလှယ်နှုန်း မတည်ငြိမ်မှုများ ဆက်လက်ဖြစ်ပေါ်နေပါသည်။</p>
+                    <a href="business.html" class="read-more">ဆက်ဖတ်ရန်</a>
+                </div>
+            </div>
+
+            <!-- သတင်း ၃ -->
+            <div class="news-card">
+                <img src="https://images.unsplash.com/photo-1508849789987-4e5333c12b78?w=500" alt="နည်းပညာသတင်း">
+                <div class="news-content">
+                    <span class="badge">ကမ္ဘာ</span>
+                    <h3>ကမ္ဘာတစ်ဝှမ်း ဉာဏ်ရည်တု (AI) နည်းပညာ ဖွံ့ဖြိုးတိုးတက်မှု အလားအလာများ</h3>
+                    <p>ယခုနှစ်အတွင်း AI နည်းပညာများ ပိုမိုခေတ်မီလာပြီး လုပ်ငန်းခွင်အသီးသီးတွင် အလိုအလျောက်စနစ်များကို တွင်ကျယ်စွာ အသုံးပြုလာကြကြောင်း လေ့လာမှုများအရ သိရသည်။</p>
+                    <a href="world.html" class="read-more">ဆက်ဖတ်ရန်</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 WYT NEWS. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
